@@ -1,0 +1,21 @@
+{
+  "name": "people_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build_api_image": "docker build . -t teerasej/people-web-api",
+    "docker_compose": "docker-compose up -d",
+    "dev": "npm run build_api_image && npm run docker_compose"
+    
+  },
+  "author": "Teerasej Jiraphatchandej",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5"
+  }
+}
